@@ -1,4 +1,4 @@
-![Shakuro Settings](title_image.png)
+![Shakuro Settings](Resources/title_image.png)
 <br><br>
 # Settings
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)

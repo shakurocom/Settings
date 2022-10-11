@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2m7-Ft-07a">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Example Settings View Controller-->
+        <scene sceneID="MN0-Ip-NbX">
+            <objects>
+                <viewController storyboardIdentifier="kExampleSettingsViewControllerID" id="2m7-Ft-07a" customClass="ExampleSettingsViewController" customModule="iOSToolboxExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQe-Il-MQc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bool value:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXX-bA-mrg">
+                                <rect key="frame" x="20" y="108" width="83" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lrx-RO-TcI">
+                                <rect key="frame" x="123" y="103" width="51" height="31"/>
+                                <connections>
+                                    <action selector="boolValueSwitchValueChanged" destination="2m7-Ft-07a" eventType="valueChanged" id="AwX-MO-HSZ"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TZG-Dt-e5c"/>
+                        <color key="backgroundColor" red="0.97894531250000005" green="0.97894531250000005" blue="0.97894531250000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aXX-bA-mrg" firstAttribute="leading" secondItem="TZG-Dt-e5c" secondAttribute="leading" constant="20" id="HeU-x6-C18"/>
+                            <constraint firstItem="lrx-RO-TcI" firstAttribute="centerY" secondItem="aXX-bA-mrg" secondAttribute="centerY" id="IE2-DJ-tVD"/>
+                            <constraint firstItem="aXX-bA-mrg" firstAttribute="top" secondItem="TZG-Dt-e5c" secondAttribute="top" constant="20" id="MXa-lp-JHa"/>
+                            <constraint firstItem="lrx-RO-TcI" firstAttribute="leading" secondItem="aXX-bA-mrg" secondAttribute="trailing" constant="20" id="ljv-qk-Kx2"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="boolValueSwitch" destination="lrx-RO-TcI" id="wCt-6P-OPj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tqJ-pP-WEa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1697" y="10463"/>
+        </scene>
+    </scenes>
+</document>

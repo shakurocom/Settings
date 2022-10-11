@@ -10,6 +10,8 @@
 - [Usage](#usage)
 - [License](#license)
 
+`Settings` is a wrapper above UserDefaults. It allows to work with UserDefaults in swift way. It also provides ability to observe changes.
+
 ## Requirements
 
 - iOS 11.0+

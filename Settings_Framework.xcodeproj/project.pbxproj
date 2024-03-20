@@ -13,6 +13,7 @@
 		17AC9EF128AA6BC200DF8A2B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EED28AA6BC200DF8A2B /* Settings.swift */; };
 		17AC9EF228AA6BC200DF8A2B /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EEE28AA6BC200DF8A2B /* SettingItem.swift */; };
 		17AC9EF328AA6BC200DF8A2B /* NSNumberRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EEF28AA6BC200DF8A2B /* NSNumberRepresentable.swift */; };
+		B8EC27422BAAC539005DA4CA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A50C85372BAAB3E800324701 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8EC27422BAAC539005DA4CA /* PrivacyInfo.xcprivacy in Resources */,
 				17AC9EEA28AA6B6500DF8A2B /* Shakuro.Settings.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,6 +26,8 @@
 		17AC9EED28AA6BC200DF8A2B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		17AC9EEE28AA6BC200DF8A2B /* SettingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
 		17AC9EEF28AA6BC200DF8A2B /* NSNumberRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberRepresentable.swift; sourceTree = "<group>"; };
+		A50C85352BAAB3CE00324701 /* title_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_image.png; sourceTree = "<group>"; };
+		A50C85372BAAB3E800324701 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 				17AC9EE928AA6B6500DF8A2B /* Shakuro.Settings.podspec */,
 				17AC9EDE28AA6A8400DF8A2B /* Settings_Framework */,
 				17AC9EEB28AA6BC200DF8A2B /* Source */,
+				A50C85362BAAB3CE00324701 /* Resources */,
 				17AC9EDD28AA6A8400DF8A2B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +81,15 @@
 			);
 			path = Source;
 			sourceTree = "<group>";
+		};
+		A50C85362BAAB3CE00324701 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A50C85352BAAB3CE00324701 /* title_image.png */,
+				A50C85372BAAB3E800324701 /* PrivacyInfo.xcprivacy */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 

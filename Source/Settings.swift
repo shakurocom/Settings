@@ -17,6 +17,7 @@ import UIKit
 
  If you want additional logic to be executed when some value is changed - use SettingItem.didChange.add() blocks.
  */
+@MainActor
 open class Settings {
 
     private var allItems: [SettingItemBase] = []
@@ -33,18 +34,22 @@ open class Settings {
                 object: nil,
                 queue: nil,
                 using: { [weak self] (_) in
-                    self?.allItems.lazy
-                        .filter({ $0.isChangeableInSettings })
-                        .forEach({ $0.updateFromUserDefaults() })
+                    Task(operation: { @MainActor in
+                        self?.allItems.lazy
+                            .filter({ $0.isChangeableInSettings })
+                            .forEach({ $0.updateFromUserDefaults() })
+                    })
             })
         }
     }
 
     deinit {
-        if let observer = willEnterForegroundObserver {
-            NotificationCenter.default.removeObserver(observer)
-            willEnterForegroundObserver = nil
-        }
+        MainActor.assumeIsolated({
+            if let observer = willEnterForegroundObserver {
+                NotificationCenter.default.removeObserver(observer)
+                willEnterForegroundObserver = nil
+            }
+        })
     }
 
     // MARK: - Public

@@ -4,7 +4,6 @@
 
 import Foundation
 import UIKit
-import Shakuro_CommonTypes
 import Settings_Framework
 
 internal enum MyEnum: Int, Codable, RawCodable {

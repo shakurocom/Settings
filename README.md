@@ -1,7 +1,7 @@
 ![Shakuro Settings](Resources/title_image.png)
 <br><br>
 # Settings
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)
 ![License MIT](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -14,8 +14,8 @@
 
 ## Requirements
 
-- iOS 11.0+
-- Xcode 11.0+
+- iOS 15.0+
+- Xcode 16.0+
 - Swift 5.0+
 
 ## Installation

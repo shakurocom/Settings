@@ -13,6 +13,7 @@
 		17AC9EF128AA6BC200DF8A2B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EED28AA6BC200DF8A2B /* Settings.swift */; };
 		17AC9EF228AA6BC200DF8A2B /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EEE28AA6BC200DF8A2B /* SettingItem.swift */; };
 		17AC9EF328AA6BC200DF8A2B /* NSNumberRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AC9EEF28AA6BC200DF8A2B /* NSNumberRepresentable.swift */; };
+		1B58755A5DEC7F1ED265E212 /* Pods_Settings_Framework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB11FB7F598BF2A04507175 /* Pods_Settings_Framework.framework */; };
 		B8EC27432BAAC5C3005DA4CA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A50C85372BAAB3E800324701 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +28,11 @@
 		17AC9EED28AA6BC200DF8A2B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		17AC9EEE28AA6BC200DF8A2B /* SettingItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
 		17AC9EEF28AA6BC200DF8A2B /* NSNumberRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberRepresentable.swift; sourceTree = "<group>"; };
+		3B5B7DF99C4F646B339760E2 /* Pods-Settings_Framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings_Framework.debug.xcconfig"; path = "Target Support Files/Pods-Settings_Framework/Pods-Settings_Framework.debug.xcconfig"; sourceTree = "<group>"; };
 		A50C85352BAAB3CE00324701 /* title_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title_image.png; sourceTree = "<group>"; };
 		A50C85372BAAB3E800324701 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		A83E5722E0BAF2A3B837AE56 /* Pods-Settings_Framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Settings_Framework.release.xcconfig"; path = "Target Support Files/Pods-Settings_Framework/Pods-Settings_Framework.release.xcconfig"; sourceTree = "<group>"; };
+		AAB11FB7F598BF2A04507175 /* Pods_Settings_Framework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Settings_Framework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B58755A5DEC7F1ED265E212 /* Pods_Settings_Framework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 				17AC9EEB28AA6BC200DF8A2B /* Source */,
 				A50C85362BAAB3CE00324701 /* Resources */,
 				17AC9EDD28AA6A8400DF8A2B /* Products */,
+				54A50072EECA36D996B2F0A2 /* Pods */,
+				F1DA3E970A2BD45A058B38DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +90,16 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		54A50072EECA36D996B2F0A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B5B7DF99C4F646B339760E2 /* Pods-Settings_Framework.debug.xcconfig */,
+				A83E5722E0BAF2A3B837AE56 /* Pods-Settings_Framework.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A50C85362BAAB3CE00324701 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +108,14 @@
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
+		};
+		F1DA3E970A2BD45A058B38DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAB11FB7F598BF2A04507175 /* Pods_Settings_Framework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -110,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17AC9EE328AA6A8400DF8A2B /* Build configuration list for PBXNativeTarget "Settings_Framework" */;
 			buildPhases = (
+				7DA07B658B841CFF0117EE1D /* [CP] Check Pods Manifest.lock */,
 				17AC9ED728AA6A8400DF8A2B /* Headers */,
 				17AC9ED828AA6A8400DF8A2B /* Sources */,
 				17AC9ED928AA6A8400DF8A2B /* Frameworks */,
@@ -167,6 +193,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DA07B658B841CFF0117EE1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Settings_Framework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		17AC9ED828AA6A8400DF8A2B /* Sources */ = {
@@ -234,13 +285,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -291,12 +343,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -305,6 +358,7 @@
 		};
 		17AC9EE428AA6A8400DF8A2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B5B7DF99C4F646B339760E2 /* Pods-Settings_Framework.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -317,6 +371,7 @@
 				INFOPLIST_FILE = Settings_Framework/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -327,13 +382,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		17AC9EE528AA6A8400DF8A2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83E5722E0BAF2A3B837AE56 /* Pods-Settings_Framework.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -346,6 +401,7 @@
 				INFOPLIST_FILE = Settings_Framework/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,7 +412,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

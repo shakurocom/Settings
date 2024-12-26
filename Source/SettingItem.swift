@@ -3,13 +3,14 @@
 // Sergey Laschuk
 //
 
+import Shakuro_BroadcastAsyncStream
 import Foundation
-import Shakuro_CommonTypes
 
 /**
  Base protocol for items.
  Used by Settings to work with items as a collection.
  */
+@MainActor
 internal protocol SettingItemBase {
 
     var isResetable: Bool { get }
@@ -23,9 +24,10 @@ internal protocol SettingItemBase {
 /**
  Main class for setting items.
  */
+@MainActor
 public class SettingItem<T: Codable & Equatable>: SettingItemBase {
 
-    public final let didChange: EventHandler<EventHandlerValueChange<T>> = EventHandler<EventHandlerValueChange<T>>()
+    public final let didChange: BroadcastAsyncStream<EventHandlerValueChange<T>> = EventHandler<EventHandlerValueChange<T>>()
 
     internal let isResetable: Bool
     internal let isChangeableInSettings: Bool

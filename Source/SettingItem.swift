@@ -21,23 +21,38 @@ internal protocol SettingItemBase {
 
 }
 
+@MainActor
+public struct SettingItemChange<T> {
+
+    public let oldValue: T
+    public let newValue: T
+
+    public init(oldValue: T, newValue: T) {
+        self.oldValue = oldValue
+        self.newValue = newValue
+    }
+
+}
+
 /**
  Main class for setting items.
  */
 @MainActor
-public class SettingItem<T: Codable & Equatable>: SettingItemBase {
+public final class SettingItem<T: Codable & Equatable>: SettingItemBase {
 
-    public final let didChange: BroadcastAsyncStream<EventHandlerValueChange<T>> = EventHandler<EventHandlerValueChange<T>>()
+    public var didChangeStream: AsyncStream<SettingItemChange<T>> { didChange.makeAsyncStream() }
 
     internal let isResetable: Bool
     internal let isChangeableInSettings: Bool
+
+    private let didChange: BroadcastAsyncStream<SettingItemChange<T>> = BroadcastAsyncStream<SettingItemChange<T>>()
 
     private let key: String
     private let defaultValue: T
     private var currentValue: T {
         didSet {
             if oldValue != currentValue {
-                didChange.invoke(EventHandlerValueChange(oldValue: oldValue, newValue: currentValue))
+                didChange.send(SettingItemChange(oldValue: oldValue, newValue: currentValue))
             }
         }
     }

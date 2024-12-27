@@ -2,6 +2,7 @@
 //
 //
 
+import Shakuro_BroadcastAsyncStream
 import Foundation
 import UIKit
 import Settings_Framework
@@ -29,19 +30,15 @@ internal class ExampleSettingsViewController: UIViewController {
     @IBOutlet private var boolValueSwitch: UISwitch!
 
     private let settings: MySettings = MySettings()
-    private var notificationToken: EventHandlerToken?
+    private var subscriptionTasks: [AnyAsyncTask] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         boolValueSwitch.isOn = settings.settingItemBoolDefaultFalse.value
-        notificationToken = settings.settingItemBoolDefaultFalse.didChange.add(handler: { (change) in
+        settings.settingItemBoolDefaultFalse.didChangeStream.subscribe(store: &subscriptionTasks, onEvent: { (change) in
             print("my setting 'settingItemBoolDefaultFalse' changed from '\(change.oldValue)' to '\(change.newValue)'")
         })
-    }
-
-    deinit {
-        notificationToken?.invalidate()
     }
 
     @IBAction private func boolValueSwitchValueChanged() {

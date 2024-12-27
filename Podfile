@@ -8,12 +8,12 @@ workspace 'Settings'
 
 target 'Settings_Framework' do
     project 'Settings_Framework.xcodeproj'
-    pod 'Shakuro.BroadcastAsyncStream', '1.0.1'
+    pod 'Shakuro.BroadcastAsyncStream', '1.0.2'
 end
 
 target 'Settings_Example' do
     project 'Settings_Example.xcodeproj'
-    pod 'Shakuro.BroadcastAsyncStream', '1.0.1'
+    pod 'Shakuro.BroadcastAsyncStream', '1.0.2'
     pod 'SwiftLint', '0.57.1'
 end
 

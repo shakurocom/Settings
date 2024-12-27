@@ -12,5 +12,5 @@ Pod::Spec.new do |s|
     s.source_files     = 'Source/*'
     s.ios.deployment_target = '15.0'
 
-    s.dependency "Shakuro.BroadcastAsyncStream", "~> 1.0.1"
+    s.dependency "Shakuro.BroadcastAsyncStream", "~> 1.0.2"
 end

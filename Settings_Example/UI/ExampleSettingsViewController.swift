@@ -36,7 +36,7 @@ internal class ExampleSettingsViewController: UIViewController {
         super.viewDidLoad()
 
         boolValueSwitch.isOn = settings.settingItemBoolDefaultFalse.value
-        settings.settingItemBoolDefaultFalse.didChangeStream.subscribe(store: &subscriptionTasks, onEvent: { (change) in
+        settings.settingItemBoolDefaultFalse.didChange.subscribe(store: &subscriptionTasks, onEvent: { (change) in
             print("my setting 'settingItemBoolDefaultFalse' changed from '\(change.oldValue)' to '\(change.newValue)'")
         })
     }

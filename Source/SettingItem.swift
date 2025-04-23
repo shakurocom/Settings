@@ -40,19 +40,19 @@ public struct SettingItemChange<T> {
 @MainActor
 public final class SettingItem<T: Codable & Equatable>: SettingItemBase {
 
-    public var didChangeStream: AsyncStream<SettingItemChange<T>> { didChange.makeAsyncStream() }
+    public var didChange: AsyncStream<SettingItemChange<T>> { didChangeInternal.makeAsyncStream() }
 
     internal let isResetable: Bool
     internal let isChangeableInSettings: Bool
 
-    private let didChange: BroadcastAsyncStream<SettingItemChange<T>> = BroadcastAsyncStream<SettingItemChange<T>>()
+    private let didChangeInternal: BroadcastAsyncStream<SettingItemChange<T>> = BroadcastAsyncStream<SettingItemChange<T>>()
 
     private let key: String
     private let defaultValue: T
     private var currentValue: T {
         didSet {
             if oldValue != currentValue {
-                didChange.send(SettingItemChange(oldValue: oldValue, newValue: currentValue))
+                didChangeInternal.send(SettingItemChange(oldValue: oldValue, newValue: currentValue))
             }
         }
     }

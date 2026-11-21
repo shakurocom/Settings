@@ -3,7 +3,11 @@
 // Sergey Laschuk
 //
 
+#if SWIFT_PACKAGE
+import BroadcastAsyncStream
+#else
 import Shakuro_BroadcastAsyncStream
+#endif
 import Foundation
 
 /**

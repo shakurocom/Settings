@@ -128,12 +128,12 @@ public final class SettingItem<T: Codable & Equatable>: SettingItemBase {
         }
     }
 
-    internal func reset() {
+    public func reset() {
         userDefaults.removeObject(forKey: key)
         currentValue = defaultValue
     }
 
-    internal func updateFromUserDefaults() {
+    public func updateFromUserDefaults() {
         if let encodedValue = userDefaults.object(forKey: key),
             let decodedValue: T = customDecode(encodedValue) {
             currentValue = decodedValue
